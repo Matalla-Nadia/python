@@ -134,11 +134,52 @@ def afficher_infos_personne(nom, age = 0): # il ne l'execute pas, pas de return 
 print("Debut")
 # apel de la fonction
 #afficher_infos_personne("June", 31)
-age = 18
+age = 62
+
 print("La personne a", age, "ans")
 if est_majeur(age):
     print("Il est majeur")
 else:
     print("Il est mineur")
-print("est_majeur",est_majeur(15))
+print("est_majeur",est_majeur(62))
 print("fin")
+
+# Exercices
+
+def afficher_table_multiplication(n, min=1, max=10):
+   if min > max:
+       print("Erreur : Le min est supérieur au max")
+       return
+
+   for i in range (min, max+1):
+        print(i, "x" , n, "=", i*n)
+
+
+afficher_table_multiplication(5, 10,1)
+
+# exercice questionnaires
+
+def poser_question(question, r1, r2, r3, r4, choix_bonne_reponse):
+        global score
+        print("score:", score)
+        print("QUESTION")
+        print(" " + question)
+        print("  (a)", r1)
+        print("  (b)", r2)
+        print("  (c)", r3)
+        print("  (d)", r4)
+        print()
+        reponse = input("Votre reponse : ")
+        if reponse == choix_bonne_reponse:
+            print("Bonne réponse")
+            score += 1
+        else:
+            print("Mauvaise réponse")
+
+        print()
+
+        score = 10
+
+poser_question("Quelle est la capitale de la France ?", "Marseille", "Nice", "Paris", "Nantes", "c")
+poser_question("Quelle est la capitale de l'Italie ?", "Rome", "Lisbonne", "Pékin", "Pises", "a")
+print("Score final:", score)
