@@ -158,10 +158,10 @@ def afficher_table_multiplication(n, min=1, max=10):
 afficher_table_multiplication(5, 10,1)
 
 # exercice questionnaires
-
+score = 0
 def poser_question(question, r1, r2, r3, r4, choix_bonne_reponse):
         global score
-        print("score:", score)
+        print("score:",score)
         print("QUESTION")
         print(" " + question)
         print("  (a)", r1)
@@ -183,3 +183,31 @@ def poser_question(question, r1, r2, r3, r4, choix_bonne_reponse):
 poser_question("Quelle est la capitale de la France ?", "Marseille", "Nice", "Paris", "Nantes", "c")
 poser_question("Quelle est la capitale de l'Italie ?", "Rome", "Lisbonne", "Pékin", "Pises", "a")
 print("Score final:", score)
+
+
+########
+
+import random
+nombre_choisi = random.randint(1,6)
+resultat= 0
+
+for i in range(3):
+    nombre_propose = int(input('saisir un nombre:'))
+    if nombre_propose == nombre_choisi:
+        resultat = 1
+        break
+    elif nombre_propose > nombre_choisi:
+        print("Le nombre que vous avez proposé est supérieur")
+    elif nombre_propose < nombre_choisi:
+        print("Le nombre que vous avez proposé est inférieur")
+
+    if resultat==1:
+     print("Bravo!")
+     print(f"Le bon numero est {nombre_choisi}")
+    else:
+     print(f'désolé le bon numéro était {nombre_choisi}')
+
+
+
+
+
