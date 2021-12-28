@@ -207,7 +207,17 @@ for i in range(3):
     else:
      print(f'désolé le bon numéro était {nombre_choisi}')
 
-
+ ######
+import random
+while True:
+    x=int(input("cliquer sur un bouton"))
+    if x==0:
+        print('Au revoir, à bientot')
+        break
+    elif x==1:
+        print(random.randint(1,6))
+    else:
+        print("je n'ai pas compris")
 
 
 
